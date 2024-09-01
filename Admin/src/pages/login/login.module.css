@@ -1,0 +1,50 @@
+.loginPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.formContainer {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0.1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: 10px;
+}
+
+.form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.form button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .formContainer {
+    width: 90%;
+  }
+}

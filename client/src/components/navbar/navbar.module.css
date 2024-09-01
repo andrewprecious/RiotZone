@@ -1,0 +1,63 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLogo img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.hambuger {
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+.close {
+  font-size: 25px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    z-index: 1;
+    background-color: #1e2024;
+    padding: 150px 30px;
+    transition: right 1s;
+  }
+
+  .navLinks.open {
+    right: 0;
+  }
+
+  .close {
+    display: flex;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+  }
+
+  .hambuger {
+    display: flex;
+  }
+}

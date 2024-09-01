@@ -1,0 +1,38 @@
+.caption {
+  padding: 20px;
+  border-radius: 5px;
+  border-left: 5px solid goldenrod;
+}
+
+.blogCards {
+  margin-top: 20px;
+}
+
+.blogCardDesc {
+  font-size: 15px;
+}
+
+.categoryName {
+  background-color: goldenrod;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.datePublished {
+  opacity: 0.3;
+  font-weight: 700;
+  font-size: small;
+}
+
+.blogCardInfo {
+  padding: 10px;
+}
+
+.topStories {
+  height: 100px;
+}
+
+.topStories .categoryName {
+  padding: 5px;
+  font-size: 12px;
+}

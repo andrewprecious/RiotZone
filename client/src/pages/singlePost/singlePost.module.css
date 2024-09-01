@@ -1,0 +1,25 @@
+.singlePostLayout {
+  margin-top: 80px;
+}
+
+.caption {
+  padding: 20px;
+  border-radius: 5px;
+  border-left: 5px solid goldenrod;
+}
+
+.left {
+  width: 90%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.postInfo {
+  margin: 10px 0;
+  font-weight: bold;
+  word-spacing: 2px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

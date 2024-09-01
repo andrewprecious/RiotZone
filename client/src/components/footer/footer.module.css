@@ -1,0 +1,54 @@
+.footer {
+  padding: 30px;
+  margin-top: 80px;
+}
+
+.contactInfo p {
+  font-size: 14px;
+  word-spacing: 3px;
+}
+
+.contactInfo i {
+  margin-right: 5px;
+}
+
+.socialHandles a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #9a9da288;
+  margin-right: 10px;
+}
+
+.recentPost {
+  font-size: 14px;
+}
+
+.recentPost .top {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 15px;
+}
+
+.categoryPara {
+  background-color: goldenrod;
+  padding: 2px;
+  border-radius: 2px;
+  color: black;
+}
+
+.categoriesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.categoriesList div {
+  background-color: #31404b;
+  color: white;
+  padding: 3px;
+  border-radius: 3px;
+  font-size: 12px;
+}

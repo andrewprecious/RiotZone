@@ -1,0 +1,57 @@
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.Navbar .left form input {
+  width: 140px;
+}
+
+.Navbar .right {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.Navbar .left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.Navbar .left .fa-bars {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.Navbar .right .bell {
+  position: relative;
+}
+
+.Navbar .right .bell .count {
+  position: absolute;
+  top: -9px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.Navbar .right .avata {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.Navbar .right i {
+  font-size: 25px;
+  cursor: pointer;
+}
