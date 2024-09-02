@@ -53,17 +53,13 @@
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  height: 400px;
 }
 
 .markdown-preview h4 {
   margin-bottom: 10px;
   font-size: 1.2em;
   color: #333;
-}
-
-.markdown-preview :global(p) {
-  margin: 10px 0;
-  color: #444;
 }
 
 .btn {

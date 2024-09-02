@@ -1,10 +1,10 @@
+import { useState } from "react";
+import axios from "axios";
+import "./createPost.css";
+import { URL } from "../../App";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navabr/Navbar";
-import axios from "axios";
-import { URL } from "../../App";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
-import "./createPost.css";
 import ReactMarkdown from "react-markdown";
 
 const CreatePost = () => {
@@ -36,7 +36,7 @@ const CreatePost = () => {
         category: [...prevData.category, value],
       }));
     }
-    // if the checkbox is unchecked
+    // If the checkbox is unchecked
     else {
       setFormData((prevData) => ({
         ...prevData,
@@ -60,7 +60,7 @@ const CreatePost = () => {
     try {
       const response = await axios.post(`${URL}/blog/createPost`, formData);
       if (response.status === 200) {
-        setSuccess("Post created successfully");
+        setSuccess("Post created successfully!");
         navigate("/dashboard"); // Navigate to the list of posts after creation
       }
     } catch (err) {
@@ -69,6 +69,7 @@ const CreatePost = () => {
       setLoading(false);
     }
   };
+
   return (
     <div className="createPost">
       <Sidebar />
@@ -83,40 +84,43 @@ const CreatePost = () => {
               <label htmlFor="title">Title:</label>
               <input
                 type="text"
-                name="title"
                 id="title"
+                name="title"
                 value={formData.title}
                 onChange={handleChange}
                 required
                 className="form-control"
               />
             </div>
+
             <div className="form-group">
               <label htmlFor="image">Image URL:</label>
               <input
                 type="text"
-                name="image"
                 id="image"
+                name="image"
                 value={formData.image}
                 onChange={handleChange}
                 required
                 className="form-control"
               />
             </div>
+
             <div className="form-group">
               <label htmlFor="snippet">Snippet:</label>
               <input
                 type="text"
-                name="snippet"
                 id="snippet"
+                name="snippet"
                 value={formData.snippet}
                 onChange={handleChange}
                 required
                 className="form-control"
               />
             </div>
+
             <div className="form-group">
-              <label htmlFor="body">Body:</label>
+              <label htmlFor="body">Body(markdown is allowed):</label>
               <textarea
                 id="body"
                 name="body"
@@ -126,37 +130,44 @@ const CreatePost = () => {
                 className="form-control"
               />
               <div className="markdown-preview">
-                <h4>Preview</h4>
-                {/* <ReactMarkdown> {formData.body} </ReactMarkdown> */}
+                <h4>Preview:</h4>
+                <ReactMarkdown>{formData.body}</ReactMarkdown>
               </div>
             </div>
+
             <div className="form-group">
               <label>Category:</label>
+              {/* {["fashion", "music", "food", "football", "basketball"].map((cat)=>{
+                label
+              })} */}
               <div className="checkbox-group">
-                {["fashion", "music", "football", "basketball"].map((cat) => (
-                  <label key={cat}>
-                    <input
-                      type="checkbox"
-                      value={cat}
-                      checked={formData.category.includes(cat)} // determines whether the checkbox is checked or not based on if the category is included in the formData.category array.
-                      onChange={handleCategoryChange} // The function to call when the checkbox is checked or unchecked.
-                    />
-                    {cat}
-                  </label>
-                ))}
+                {["fashion", "music", "food", "football", "basketball"].map(
+                  (cat) => (
+                    <label key={cat}>
+                      <input
+                        type="checkbox"
+                        value={cat}
+                        checked={formData.category.includes(cat)} //Determines whether the checkbox is checked or not based on if the category is included in the formData.category array.
+                        onChange={handleCategoryChange} // The function to call when the checkbox is checked or unchecked.
+                      />
+                      {cat}
+                    </label>
+                  )
+                )}
               </div>
             </div>
+
             <div className="form-group">
-              <label htmlFor="topStory">TopStory:</label>
+              <label htmlFor="topStory">Top Story:</label>
               <select
-                name="topStory"
                 id="topStory"
+                name="topStory"
                 value={formData.topStory}
                 onChange={handleChange}
                 className="form-control"
                 required
               >
-                <option value=""></option>
+                <option value="">Select...</option>
                 <option value="yes">yes</option>
                 <option value="no">no</option>
               </select>

@@ -7,6 +7,7 @@ import RelatedPosts from "../../components/relatedPosts/RelatedPosts";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import { URL } from "../../App";
+import ReactMarkdown from "react-markdown";
 
 const SinglePost = () => {
   const [post, setPosts] = useState([]);
@@ -83,7 +84,7 @@ const SinglePost = () => {
                 </p> */}
               </div>
               <div>
-                <p>{post.body}</p>
+                <ReactMarkdown>{post.body}</ReactMarkdown>
               </div>
             </div>
           )}
