@@ -1,6 +1,6 @@
 const Category = require("../models/category");
 const mongoose = require("mongoose");
-const Post = require("../models/Post");
+const Post = require("../models/post");
 
 // categories
 const getAllCategory = async (req, res) => {
