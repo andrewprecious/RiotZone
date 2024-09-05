@@ -5,6 +5,7 @@ import { URL } from "../../App";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./editPost.css";
+import ReactMarkdown from "react-markdown";
 
 const EditPost = () => {
   const location = useLocation();
@@ -141,6 +142,10 @@ const EditPost = () => {
                 required
                 className="form-control"
               />
+              <div className="markdown-preview">
+                <h4>Preview:</h4>
+                <ReactMarkdown>{formData.body}</ReactMarkdown>
+              </div>
             </div>
             <div className="form-group">
               <label>Category:</label>
